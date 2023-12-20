@@ -11,9 +11,9 @@ public class PridicateJoining {
         System.out.println(p.test(11));
 
         Predicate<String> p1 = dt -> dt.length() > 10;
-      //  Predicate<String> p2 = dt -> dt.equalsIgnoreCase("pankajkumarsingh");
-        Predicate<String> p3 = p1.and(p2);
-      //  System.out.println(p3.test("Pankajkumarsingh"));
+        // Predicate<String> p2 = dt -> dt.equalsIgnoreCase("pankajkumarsingh");
+        // Predicate<String> p3 = p1.and(p2);
+        // System.out.println(p3.test("Pankajkumarsingh"));
         Predicate<Collection> p4 = dt -> dt.isEmpty();
         List list = new ArrayList();
         System.out.println(p4.test(list));
@@ -23,6 +23,9 @@ public class PridicateJoining {
         Predicate<Integer> p6 = dt -> dt % 2 == 0;
         Predicate<Integer> p7 = p5.and(p6);
         m1(p7, x);
+        m1(p6.negate(), x);
+        m1(p5.and(p6), x);
+        m1(p5.or(p6), x);
     }
 
     public static void m1(Predicate<Integer> p, int[] x) {
