@@ -18,7 +18,9 @@ public class PridicateJoining {
         List list = new ArrayList();
         System.out.println(p4.test(list));
         // filter the data with >10 and even number
+         int[] x1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
         int[] x = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
+        
         Predicate<Integer> p5 = dt -> dt > 10;
         Predicate<Integer> p6 = dt -> dt % 2 == 0;
         Predicate<Integer> p7 = p5.and(p6);

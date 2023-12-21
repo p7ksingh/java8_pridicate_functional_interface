@@ -15,6 +15,7 @@ public class PridicateFunction implements PridicateTest {
         }
 
     }
+
     public static void main(String[] args) {
         PridicateTest f = new PridicateFunction();
         f.test("qwee");
